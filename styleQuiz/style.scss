@@ -1,0 +1,209 @@
+
+
+@import '../style/includes/steper';
+
+%container{
+    height: 20%;
+    width: 20%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid  rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:140%;
+    font-family: 'Bebas Neue', cursive;
+    
+    }
+
+body{
+
+    .hide{
+        display: none;
+
+    }
+    .remove{
+        display: block;
+    }
+   
+    display: grid;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    background-image: url("../images/stacked-steps-haikei.png"); 
+    background-size: cover;
+
+    header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .timeCounter{
+        @extend %container;
+       
+     }
+        .quistionsCounter{
+            @extend %container;
+            
+            color: rgba(12, 9, 9, 0.715);
+            
+        }
+
+    }
+    main{
+      
+
+        font-family: 'Bebas Neue', cursive;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.3px);
+        -webkit-backdrop-filter: blur(6.3px);
+        border: 1px solid  rgba(255, 255, 255, 0.3);
+        text-align: center;
+        display: grid;
+        align-items: center;
+        .sectionCarts{
+            color: rgb(71, 68, 68);
+            justify-items: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 50px;
+            
+        }
+        .carts{
+            background-color: rgb(237, 149, 149);
+            border: 3px solid white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            height: 220px;
+            width: 90%;
+            transition: 0.3s ease-in-out;
+            
+       
+            
+        }
+        
+       
+        .carts:hover{
+            transform: scale(1.05);
+            
+        }
+
+          h1{
+
+      color:white;
+      margin:30px auto;
+      width:50%;
+      text-align:center;
+      padding:20px;
+      text-transform:uppercase;
+      font-size:2vw;
+      letter-spacing:5px;
+      border-top:1px solid;
+      border-bottom:1px solid;
+    }
+     
+    button{
+      width:100%;
+      height:80px;
+      position:relative;
+      background:rgba(255, 255, 255, .27);
+      text-transform:uppercase;
+      color:white;
+      font-weight:700;
+      letter-spacing:1px;
+      border:none;
+      font-size:15px;
+      outline:none;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      cursor: pointer;
+    }
+        .correct{
+            
+            background-color: rgba(0, 255, 0, 0.533);
+            color: aliceblue;
+            
+        }
+        .wrong{
+            
+            background-color:rgba(255, 0, 0, 0.532);
+            color: aliceblue;
+        }
+        .allready_answered{
+            pointer-events: none;
+            
+
+        }
+       
+        .result{
+            p{
+                color:rgba(35, 35, 35, 0.99);
+                font-size: 25px;
+                
+            }
+            color:white;
+            margin:30px auto;
+            width:50%;
+            text-align:center;
+            padding:20px;
+            letter-spacing:5px;
+            border-top:1px solid;
+            border-bottom:1px solid;
+
+          }
+
+          a{
+            text-decoration: none;
+            color:white;
+            }
+
+    }
+    .answers-indicator{
+        display: flex;
+        align-items: center;
+        
+
+        div{
+        @extend %container;
+        margin: 4px;
+        border-radius: 50px;
+        display: grid;
+        height: 50px;
+        width:50px ;
+        border-color: violet;
+       }
+       .wrong{
+        background-color: rgb(242, 117, 117);
+        background-image: url("../images/icons8-close-48.png");
+
+       }
+       .progress{
+        background-color: rgb(173, 173, 173);
+        background-image: url("../images/icons8-progress-indicator-32.png");
+        background-size: cover;
+
+
+       }
+
+       .correct{
+        background-color: rgb(154, 235, 154);
+        background-image: url("../images/icons8-done-48.png");
+
+       }
+
+
+    }
+
+   
+
+    
+    
+}
+
+
+
+   
+  

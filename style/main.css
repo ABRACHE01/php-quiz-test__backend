@@ -1,0 +1,314 @@
+.wrapper-progressBar {
+  width: 100%;
+}
+
+.progressBar li {
+  list-style-type: none;
+  float: left;
+  width: 33%;
+  position: relative;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+.progressBar li:before {
+  background-image: url("../images/icons8-help-80.png");
+  background-size: cover;
+  content: " ";
+  line-height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: block;
+  text-align: center;
+  margin: 0 auto 10px;
+  background-color: white;
+}
+
+.progressBar li:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: #ddd;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+}
+
+.progressBar li:first-child:after {
+  content: none;
+}
+
+.progressBar li.active {
+  color: dodgerblue;
+}
+
+.progressBar li.active:before {
+  border-color: rgb(220, 117, 189);
+  background-color: rgb(220, 117, 189);
+}
+
+.progressBar .active:after {
+  background-color: dodgerblue;
+}
+
+.example_g, main .container1, main .container2 {
+  width: 320px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #494949;
+  background: #ffffff;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.example_g:before, main .container1:before, main .container2:before {
+  content: "";
+  background: linear-gradient(45deg, #FF0000, #e9a003, #ff6600, #f34155, #3FF4EB, #ad6fd4, #22abd8, #c70e48, #FF0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  -webkit-animation: glowing 20s linear infinite;
+          animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.example_g:active, main .container1:active, main .container2:active {
+  color: #000;
+}
+
+.example_g:active:after, main .container1:active:after, main .container2:active:after {
+  background: transparent;
+}
+
+.example_g:hover, main .container1:hover, main .container2:hover {
+  transform: scale(1.05);
+}
+
+.example_g:hover:before, main .container1:hover:before, main .container2:hover:before {
+  opacity: 1;
+}
+
+.example_g:after, main .container1:after, main .container2:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(238, 107, 107, 0.821);
+  left: 0;
+  top: 0;
+}
+
+@-webkit-keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+}
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+.btn--primary {
+  background: #8b9afb;
+  color: #fff;
+  font-size: 15px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  padding: 12px 36px;
+}
+.btn--primary:hover {
+  background: #7789fa;
+}
+.btn--primary:active {
+  background: #8b9afb;
+  box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+.btn--inside {
+  margin-left: -96px;
+}
+
+.form__field {
+  width: 360px;
+  background: #fff;
+  color: #a3a3a3;
+  font-size: 15px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
+}
+
+.text-center {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin: -50px 0 80px 0;
+  display: block;
+  text-align: center;
+}
+
+.box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.89);
+  border-radius: 3px;
+  padding: 70px 100px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 16px;
+  color: #fff;
+  pointer-event: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+  border: 0;
+  border-bottom: 1px solid #555;
+  background: transparent;
+  width: 100%;
+  padding: 8px 0 5px 0;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-container input:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #e74c3c;
+}
+
+.btn {
+  color: #fff;
+  background-color: #e74c3c;
+  outline: none;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+/*.btn:after{
+	content:"";
+	position:absolute;
+	background:rgba(0,0,0,0.50);
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+}*/
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+  top: -12px;
+  font-size: 12px;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  color: white;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("../images/stacked-steps-haikei.png");
+  background-size: cover;
+}
+body h1 {
+  font-size: 70px;
+  font-family: Bebas Neue;
+  padding: auto;
+  padding-left: 13px;
+}
+body h2 {
+  font-family: Bebas Neue;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+main .hide {
+  display: none;
+}
+main .remove {
+  display: block;
+}
+main a {
+  text-decoration: none;
+  color: #494949;
+}
+main .container1, main .container2 {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  width: 20%;
+  height: 300%;
+}
+main .container1 P, main .container1 ul, main .container2 P, main .container2 ul {
+  font-family: "Bebas Neue", cursive;
+  color: rgb(241, 229, 229);
+}
+main .container1 ul, main .container2 ul {
+  text-align: start;
+}
+main .midelbox {
+  display: grid;
+  justify-content: center;
+}/*# sourceMappingURL=main.css.map */

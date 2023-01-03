@@ -1,0 +1,65 @@
+.wrapper-progressBar {
+    width: 100%
+    
+}
+
+.progressBar li {
+    
+    list-style-type: none;
+    float: left;
+    width: 33%;
+    position: relative;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+.progressBar li:before {
+    background-image: url("../images/icons8-help-80.png"); 
+    background-size:cover;
+   
+    content: " ";
+    line-height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px;
+    background-color: white
+}
+
+.progressBar li:after {
+    
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressBar li:first-child:after {
+    
+    content: none;
+    
+}
+
+.progressBar li.active {  
+    color: dodgerblue;
+    
+}
+
+.progressBar li.active:before {
+    border-color: rgb(220, 117, 189);
+    background-color: rgb(220, 117, 189);
+  
+}
+
+.progressBar .active:after {
+    background-color: dodgerblue;
+    
+}
