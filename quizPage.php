@@ -46,16 +46,23 @@
    
     </main >
     
-   
+    
     <main class="result-Box hide">
 
+    <?php 
+    include "./classes/user.class.php";
+          username();
+    ?>
+
+
         <div class="result">
-            <!-- <p>User Name: <span id="valueInput" class="user-name"></span></p> -->
+            <p><?php echo 'full name:'.$_SESSION['fullname']; ?></p>
             <p>total score: <span class="total-score"></span></p>
             <p>percentage: <span class="total-percentage"></span></p>
             <p>feedback: <span class="feedback"></span></p>
             <p>correct answers: <span class="total-correct"></span></p>
             <p>wrong answers: <span class="total-wrong"></span></p>
+          
             <button class="btn" type="button"  ><h3><a href="first.php">start over</a></h3></button>   
         </div>
         

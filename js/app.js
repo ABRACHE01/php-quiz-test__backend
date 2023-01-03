@@ -79,7 +79,6 @@ function getNewQuestion() {
 
   // console.log(availableOptions)
   document.querySelector(".option-container").innerHTML = "";
-
   for (let i = 0; i < optionLen; i++) {
     const option = document.createElement("button");
     option.innerHTML = currentQuestion.option[i];
@@ -110,7 +109,7 @@ function getResult(element) {
   // const id = parseInt(element.id);
   //get the answer by compiring the id of clicked option
 
-  // if (id === currentQuestion.answer) {
+  // if (id === currentQuestion.answer){
   //   //set the green color to the current option
   //   element.classList.add("correct");
   // updateAnswerIndecator("correct");
@@ -186,6 +185,8 @@ function quizOver() {
 }
 
 function reciveData() {
+ 
+
   $.post(
     "Correctanswers.php",
     function (answers) {
@@ -195,7 +196,7 @@ function reciveData() {
       document.getElementById("timer").innerHTML = "time over";
       //looping the answers 
       for (let i = 0; i < ans.length; i++) {
-
+        
         correcting = ans.includes(answers[i]);
         console.log(correcting);
         if (correcting == true) {
@@ -271,7 +272,7 @@ function timeCount() {
 
 
 // execute js fanctions
-if ( window.location.src == "http://loalhost/k2/quizPage.php") { 
+if ( window.location.href == "http://localhost/k2/quizPage.php" ) {
   window.onload = function () {
 
     timeCount();
@@ -281,6 +282,7 @@ if ( window.location.src == "http://loalhost/k2/quizPage.php") {
     getNewQuestion();
   
     answerIndecator();
+    
   };
 
 }else{
@@ -290,10 +292,12 @@ if ( window.location.src == "http://loalhost/k2/quizPage.php") {
 
   function showStart() {
       //hide quiz page
-      username.classList.add("hide");
+      username.classList.add("remove");
       //show quiz page
-      quizstart.classList.add("remove");
+      quizstart.classList.add("hide");
+     
   }
+
 
 
  

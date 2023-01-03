@@ -29,24 +29,24 @@
 
         <section class="midelbox">
 
-            <div class="user-name nameinputbox">
+            <div class="user-name nameinputbox hide">
 
                 <h2>to start the test you should first enter your name </h2>
-                <form class="form " action="./quizPage.php" method="post">
-                    <input type="text" name="fullname" id="domTextElement"  class="form__field" placeholder="Enter your full name please " />
-                    <button type="button" onclick="showStart();"
-                        class="btn btn--primary btn--inside uppercase" >Send</button>
+                <form class="form " action="quizPage.php" method="post">
+                    <input type="text" name="fullname" id="domTextElement" class="form__field"
+                        placeholder="Enter your full name please " required />
+                    <button type="submit" class="btn btn--primary btn--inside uppercase">Send</button>
                 </form>
 
             </div>
 
 
-            <div class=" quiz-start hide ">
+            <div class=" quiz-start  ">
 
-                <button class="example_g"  type="button"><a href="quizPage.php"> Click here to
-                        Start!</a></button>
+                <button class="example_g" onclick="showStart();" type="button">Click here to
+                    Start!</button>
                 <img src="./images/Customer Survey-rafiki.svg" alt="">
-               
+
 
             </div>
 
@@ -61,7 +61,7 @@
                 <li>the resault at the end </li>
             </ul>
         </section>
-        
+
     </main>
 
     <footer>
@@ -79,8 +79,8 @@
         </div>
 
     </footer>
-   
-     <script src="js/app.js"></script>
+
+    <script src="js/app.js"></script>
 
 </body>
 
